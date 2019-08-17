@@ -1,0 +1,13 @@
+var argv = require('yargs')
+    .usage('Usage: $0 <command> [options]')
+    .command('listar', 'Lista tabla de multiplicar segun parametros')
+    .example('$0 base -b 2', 'lista la tabla del 2')
+    .alias('l', 'list')
+    .nargs('l',1)
+    .describe('l', 'Establece limite al multiplicador')
+    .demandOption(['b','l'])
+    .help('h')
+    .alias('h', 'help')
+    .epilog('copyright 2019')
+    .command('crear', 'Crea archivo de tabla de multiplicar segun parametros')
+    .argv;
